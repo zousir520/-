@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>素食食谱海外出口 Vegan Recipes Export</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Arial', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 32px 24px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        .recipe {
+            background: #fafafa;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .recipe img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+        .contact, .about {
+            margin: 32px 0;
+            padding: 20px;
+            background: #f0f4f8;
+            border-radius: 8px;
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 16px;
+        }
+        .lang-switch button {
+            background: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 6px 16px;
+            margin-left: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .lang-switch button.active {
+            background: #388e3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <button id="btn-zh" class="active">中文</button>
+            <button id="btn-en">English</button>
+        </div>
+        <h1 class="zh">素食食谱</h1>
+        <h1 class="en" style="display:none;">Vegan Recipes Export</h1>
+        <p class="zh" style="text-align:center;">精选健康美味的素食食谱，助力中国素食文化走向世界。</p>
+        <p class="en" style="display:none;text-align:center;">Selected healthy and delicious vegan recipes, promoting Chinese vegan culture to the world.</p>
+
+        <!-- 英文专栏内容，现中英文模式都显示 -->
+        <div class="vegan-article" style="margin: 32px 0; padding: 24px; background: #f8fafc; border-radius: 10px; box-shadow: 0 1px 6px rgba(0,0,0,0.04);">
+            <h2 style="text-align:center; margin-top:0;">10 Essential Vegan Recipes for Beginners: Simple, Tasty & Nutrient-Rich</h2>
+            <p>Vegan eating has never been easier—or more delicious. Whether you’re just starting your plant-based journey or looking to refresh your meal rotation, these 10 recipes prioritize simplicity, everyday ingredients, and bold flavors. From cozy soups to indulgent desserts, each dish proves vegan cooking is about abundance, not restriction.</p>
+            <h3>Why Go Vegan?</h3>
+            <p>More than a diet, vegan eating is a celebration of plants—veggies, grains, legumes, nuts, and seeds—that deliver fiber, vitamins, and protein to fuel your day. It’s also a flexible way to eat: no strict rules, just creative ways to make plants taste amazing. Perfect for busy schedules, these recipes skip fancy tools and focus on what matters: flavor and ease.</p>
+            <h3>I. Breakfast: Quick Starts for Busy Mornings</h3>
+            <h4>1. Avocado Toast with a Twist</h4>
+            <p><b>Keyword Tags</b>: #5MinuteBreakfast #VeganBasics</p>
+            <p><b>Ingredients</b> (1 serving):<br>
+            - 1 slice sourdough bread (toasted)<br>
+            - ½ ripe avocado<br>
+            - Pinch of red pepper flakes<br>
+            - Drizzle of olive oil<br>
+            - Optional: Everything Bagel seasoning</p>
+            <p><b>How to Make It</b>:<br>
+            Mash avocado onto toast, sprinkle with red pepper flakes and a drizzle of oil. Add seasoning if you’re feeling fancy.</p>
+            <p><i>Pro Tip</i>: For extra protein, top with a sprinkle of hemp seeds.</p>
+            <h4>2. Overnight Chia Pudding</h4>
+            <p><b>Keyword Tags</b>: #MealPrepVegan #NoCookMeals</p>
+            <p><b>Ingredients</b> (1 serving):<br>
+            - 3 tbsp chia seeds<br>
+            - 1 cup almond milk<br>
+            - 1 tsp maple syrup<br>
+            - ½ tsp vanilla extract<br>
+            - Toppings: sliced strawberries, granola</p>
+            <p><b>How to Make It</b>:<br>
+            Whisk chia seeds, milk, syrup, and vanilla in a jar. Chill overnight. In the morning, add toppings.</p>
+            <p><i>Why It Works</i>: Chia seeds soak up liquid, turning into a creamy pudding—no cooking required.</p>
+            <h3>II. Lunch: Hearty & Portable Options</h3>
+            <h4>3. Mediterranean Chickpea Salad</h4>
+            <p><b>Keyword Tags</b>: #VeganLunchBox #ProteinPacked</p>
+            <p><b>Ingredients</b> (2 servings):<br>
+            - 1 can (15 oz) chickpeas (drained, rinsed)<br>
+            - 1 cup cherry tomatoes (halved)<br>
+            - ½ cucumber (diced)<br>
+            - ¼ red onion (sliced)<br>
+            - ¼ cup feta-style vegan cheese (crumbled)<br>
+            - Dressing: 2 tbsp olive oil + 1 tbsp red wine vinegar + oregano</p>
+            <p><b>How to Make It</b>:<br>
+            Toss all ingredients in a bowl, drizzle with dressing. Pack in a container for lunch on the go.</p>
+            <p><i>Serving Hack</i>: Serve over a bed of arugula for extra greens.</p>
+            <h4>4. Lentil & Vegetable Wrap</h4>
+            <p><b>Keyword Tags</b>: #VeganSandwich #HeartyMeals</p>
+            <p><b>Ingredients</b> (2 servings):<br>
+            - 1 cup cooked lentils<br>
+            - 2 large whole-grain wraps<br>
+            - ½ cup roasted veggies (zucchini, bell peppers)<br>
+            - ¼ cup hummus<br>
+            - Shredded lettuce</p>
+            <p><b>How to Make It</b>:<br>
+            Spread hummus on wraps, layer lentils, veggies, and lettuce. Roll tightly and slice in half.</p>
+            <p><i>Time Saver</i>: Use canned lentils (rinsed) to skip cooking.</p>
+            <h3>III. Dinner: Satisfying Plant-Based Main Dishes</h3>
+            <h4>5. Creamy Coconut Lentil Curry</h4>
+            <p><b>Keyword Tags</b>: #VeganCurry #OnePotWonders</p>
+            <p><b>Ingredients</b> (4 servings):<br>
+            - 1 tbsp coconut oil<br>
+            - 1 onion (diced)<br>
+            - 3 garlic cloves (minced)<br>
+            - 1 tbsp ginger (grated)<br>
+            - 2 tbsp curry paste<br>
+            - 1 can (15 oz) red lentils (drained)<br>
+            - 1 can (14 oz) diced tomatoes<br>
+            - 1 can (14 oz) coconut milk<br>
+            - Fresh basil (for garnish)</p>
+            <p><b>How to Make It</b>:<br>
+            Heat oil, sauté onion, garlic, and ginger 5 minutes. Add curry paste, cook 1 minute. Stir in lentils, tomatoes, and coconut milk. Simmer 20 minutes. Serve with rice.</p>
+            <h4>6. Stuffed Bell Peppers with Quinoa</h4>
+            <p><b>Keyword Tags</b>: #VeganDinner #MealPrepFriendly</p>
+            <p><b>Ingredients</b> (4 servings):<br>
+            - 4 large bell peppers (halved, seeds removed)<br>
+            - 1 cup cooked quinoa<br>
+            - 1 can (15 oz) black beans (drained)<br>
+            - 1 cup corn (fresh or frozen)<br>
+            - ½ cup salsa<br>
+            - ¼ cup vegan cheese (shredded)</p>
+            <p><b>How to Make It</b>:<br>
+            Preheat oven to 375°F (190°C). Mix quinoa, beans, corn, and salsa. Stuff into peppers, top with cheese. Bake 30 minutes until peppers are tender.</p>
+            <h4>7. Vegan Chili with Sweet Potatoes</h4>
+            <p><b>Keyword Tags</b>: #VeganComfortFood #FreezerFriendly</p>
+            <p><b>Ingredients</b> (6 servings):<br>
+            - 1 tbsp olive oil<br>
+            - 1 onion (diced)<br>
+            - 2 carrots (chopped)<br>
+            - 2 celery stalks (chopped)<br>
+            - 2 garlic cloves (minced)<br>
+            - 1 large sweet potato (diced)<br>
+            - 2 cans (15 oz each) kidney beans (drained)<br>
+            - 1 can (14 oz) diced tomatoes<br>
+            - 2 cups vegetable broth<br>
+            - 2 tbsp chili powder</p>
+            <p><b>How to Make It</b>:<br>
+            Heat oil, sauté veggies 5 minutes. Add sweet potato, beans, tomatoes, broth, and spices. Simmer 30 minutes.</p>
+            <h3>IV. Snacks & Desserts: Guilt-Free Indulgences</h3>
+            <h4>8. Roasted Veggie Fries</h4>
+            <p><b>Keyword Tags</b>: #VeganSnacks #HealthyAlternatives</p>
+            <p><b>Ingredients</b> (4 servings):<br>
+            - 2 large sweet potatoes (cut into fries)<br>
+            - 2 tbsp olive oil<br>
+            - 1 tsp paprika<br>
+            - ½ tsp garlic powder</p>
+            <p><b>How to Make It</b>:<br>
+            Toss fries with oil and spices. Bake at 425°F (220°C) for 25 minutes, flipping once.</p>
+            <h4>9. Peanut Butter Energy Balls</h4>
+            <p><b>Keyword Tags</b>: #VeganSnacks #NoBakeTreats</p>
+            <p><b>Ingredients</b> (12 balls):<br>
+            - 1 cup oats<br>
+            - ½ cup peanut butter (no added sugar)<br>
+            - ¼ cup maple syrup<br>
+            - ¼ cup ground flaxseed<br>
+            - ¼ cup chocolate chips</p>
+            <p><b>How to Make It</b>:<br>
+            Mix all ingredients, roll into balls. Chill 30 minutes. Grab and go for quick energy.</p>
+            <h4>10. Chocolate Avocado Mousse</h4>
+            <p><b>Keyword Tags</b>: #VeganDessert #RichAndCreamy</p>
+            <p><b>Ingredients</b> (4 servings):<br>
+            - 2 ripe avocados<br>
+            - ¼ cup cocoa powder<br>
+            - 3 tbsp maple syrup<br>
+            - 2 tbsp almond milk<br>
+            - 1 tsp vanilla extract</p>
+            <p><b>How to Make It</b>:<br>
+            Blend all ingredients until smooth. Chill 1 hour. Top with berries.</p>
+            <h3>Your Vegan Journey Starts Here</h3>
+            <p>These recipes are just the beginning—vegan eating is all about experimentation. Swap ingredients, adjust spices, and make each dish your own.</p>
+            <p><i>Want more? Sign up for our weekly newsletter for seasonal recipes, grocery lists, and vegan hacks. Let’s make plant-based eating easy!</i></p>
+        </div>
+
+        <h2 class="zh">特色素食食谱</h2>
+        <h2 class="en" style="display:none;">Featured Vegan Recipes</h2>
+        <div class="recipes">
+            <div class="recipe">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="麻婆豆腐 Mapo Tofu">
+                <h3 class="zh">麻婆豆腐</h3>
+                <h3 class="en" style="display:none;">Mapo Tofu</h3>
+                <p class="zh">经典川菜，麻辣鲜香，豆腐嫩滑，营养丰富。</p>
+                <p class="en" style="display:none;">A classic Sichuan dish, spicy and flavorful, with tender tofu and rich nutrition.</p>
+                <ul class="zh">
+                    <li>豆腐切块，焯水备用</li>
+                    <li>锅中加油，炒香豆瓣酱、花椒</li>
+                    <li>加入豆腐、酱油、素高汤，炖煮入味</li>
+                    <li>撒葱花出锅</li>
+                </ul>
+                <ul class="en" style="display:none;">
+                    <li>Cut tofu into cubes and blanch</li>
+                    <li>Stir-fry chili bean paste and Sichuan peppercorns</li>
+                    <li>Add tofu, soy sauce, vegan broth, simmer for flavor</li>
+                    <li>Garnish with scallions and serve</li>
+                </ul>
+            </div>
+            <div class="recipe">
+                <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" alt="清炒时蔬 Stir-fried Seasonal Vegetables">
+                <h3 class="zh">清炒时蔬</h3>
+                <h3 class="en" style="display:none;">Stir-fried Seasonal Vegetables</h3>
+                <p class="zh">新鲜时蔬，简单快炒，保留原汁原味，健康美味。</p>
+                <p class="en" style="display:none;">Fresh seasonal vegetables, quickly stir-fried to retain original flavor, healthy and tasty.</p>
+                <ul class="zh">
+                    <li>洗净各种时蔬，切段</li>
+                    <li>热锅加油，快速翻炒</li>
+                    <li>加盐调味，保持脆嫩</li>
+                </ul>
+                <ul class="en" style="display:none;">
+                    <li>Wash and cut various seasonal vegetables</li>
+                    <li>Heat oil in wok, stir-fry quickly</li>
+                    <li>Add salt to taste, keep vegetables crisp</li>
+                </ul>
+            </div>
+            <div class="recipe">
+                <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="素什锦 Vegan Assorted Stir-fry">
+                <h3 class="zh">素什锦</h3>
+                <h3 class="en" style="display:none;">Vegan Assorted Stir-fry</h3>
+                <p class="zh">多种蔬菜搭配，色香味俱全，营养均衡。</p>
+                <p class="en" style="display:none;">A mix of various vegetables, colorful, aromatic, and well-balanced in nutrition.</p>
+                <ul class="zh">
+                    <li>准备胡萝卜、木耳、豆腐干等食材</li>
+                    <li>切丝切片，依次下锅翻炒</li>
+                    <li>加酱油、素蚝油调味</li>
+                </ul>
+                <ul class="en" style="display:none;">
+                    <li>Prepare carrots, black fungus, dried tofu, etc.</li>
+                    <li>Slice and stir-fry ingredients in order</li>
+                    <li>Add soy sauce and vegan oyster sauce for flavor</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h2 class="zh">出口/合作联系方式</h2>
+            <h2 class="en" style="display:none;">Export/Cooperation Contact</h2>
+            <p class="zh">邮箱：export@veganrecipes.com<br>电话：+86-123-4567-8901</p>
+            <p class="en" style="display:none;">Email: export@veganrecipes.com<br>Tel: +86-123-4567-8901</p>
+        </div>
+
+        <div class="about">
+            <h2 class="zh">关于我们</h2>
+            <h2 class="en" style="display:none;">About Us</h2>
+            <p class="zh">我们致力于推广中国素食文化，将健康美味的素食食谱带向全球。欢迎各界合作，共创美好未来！</p>
+            <p class="en" style="display:none;">We are committed to promoting Chinese vegan culture and bringing healthy, delicious vegan recipes to the world. Welcome to cooperate with us for a better future!</p>
+        </div>
+    </div>
+    <script>
+        const btnZh = document.getElementById('btn-zh');
+        const btnEn = document.getElementById('btn-en');
+        const zhEls = document.querySelectorAll('.zh');
+        const enEls = document.querySelectorAll('.en');
+        btnZh.onclick = function() {
+            btnZh.classList.add('active');
+            btnEn.classList.remove('active');
+            zhEls.forEach(el => el.style.display = '');
+            enEls.forEach(el => el.style.display = 'none');
+        };
+        btnEn.onclick = function() {
+            btnEn.classList.add('active');
+            btnZh.classList.remove('active');
+            zhEls.forEach(el => el.style.display = 'none');
+            enEls.forEach(el => el.style.display = '');
+        };
+    </script>
+</body>
+</html> 
