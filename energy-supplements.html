@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>能量补充剂指南 - Energy Supplements Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Arial', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: white;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-left: 4px solid #059669;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #059669;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #065f46;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #059669;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        /* Language Switcher */
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .lang-btn {
+            background: #059669;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .lang-btn:hover {
+            background: #047857;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(5, 150, 105, 0.2);
+        }
+        
+        .lang-btn.active {
+            background: #065f46;
+            box-shadow: 0 2px 4px rgba(5, 150, 105, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23059669" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23059669" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23059669" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #065f46;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: #047857;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 60px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .content-section:last-child {
+            border-bottom: none;
+        }
+        
+        .content-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #065f46;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .content-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: #059669;
+            border-radius: 2px;
+        }
+        
+        .content-section h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #047857;
+            margin: 40px 0 20px;
+            padding-left: 20px;
+            border-left: 4px solid #059669;
+        }
+        
+        .content-section h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #065f46;
+            margin: 30px 0 15px;
+        }
+        
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .content-section ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        .content-section li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 12px;
+            position: relative;
+        }
+        
+        .content-section li::before {
+            content: '•';
+            color: #059669;
+            font-weight: bold;
+            position: absolute;
+            left: -20px;
+        }
+        
+        /* Image Placeholders */
+        .image-placeholder {
+            background: #f9fafb;
+            border: 2px dashed #d1d5db;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .image-placeholder:hover {
+            border-color: #059669;
+            background: #f0fdf4;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.1);
+        }
+        
+        .image-placeholder img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .image-placeholder img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-placeholder div {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #047857;
+        }
+        
+        /* Hidden content for language switching */
+        .lang-zh { display: none; }
+        .lang-en { display: block; }
+        
+        body.lang-en .lang-zh { display: none; }
+        body.lang-en .lang-en { display: block; }
+        
+        body.lang-zh .lang-zh { display: block; }
+        body.lang-zh .lang-en { display: none; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .content-section h2 {
+                font-size: 2rem;
+            }
+            
+            .content-section h3 {
+                font-size: 1.5rem;
+            }
+            
+            .content-section h4 {
+                font-size: 1.2rem;
+            }
+            
+            .content-section p {
+                font-size: 1rem;
+            }
+            
+            .image-placeholder {
+                padding: 20px;
+                margin: 20px 0;
+            }
+            
+            .image-placeholder img {
+                border-radius: 6px;
+            }
+            
+            .image-placeholder div {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Loading animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .content-section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        /* Enhanced focus states */
+        .lang-btn:focus {
+            outline: 2px solid #059669;
+            outline-offset: 2px;
+        }
+        
+        /* Print styles */
+        @media print {
+            .navbar,
+            .lang-switch {
+                display: none;
+            }
+            
+            .hero {
+                background: white !important;
+                padding: 20px 0;
+            }
+            
+            .content-section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">💊</div>
+                    <div class="logo-text lang-zh">能量补充剂</div>
+                    <div class="logo-text lang-en">Energy Supplements</div>
+                </div>
+                <div class="nav-links">
+                    <div class="lang-switch">
+                        <button class="lang-btn" onclick="switchLanguage('zh')">🇨🇳 中文</button>
+                        <button class="lang-btn active" onclick="switchLanguage('en')">🇺🇸 English</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="lang-zh">能量补充剂：解锁身体能量的科学密码</h1>
+                    <h1 class="lang-en">Energy Supplements: Unlocking the Scientific Code for Bodily Energy</h1>
+                    <p class="lang-zh">在现代快节奏的生活中，保持高能量水平对每个人来说都至关重要。无论是忙碌的专业人士、学生、运动员，还是希望改善整体健康的人，能量补充剂都成为了提升活力的热门选择。但在开始服用之前，了解它们的工作原理、哪些适合您，以及可能带来的风险至关重要。让我们一起探索能量补充剂的世界！</p>
+                    <p class="lang-en">In today's fast-paced world, keeping energy levels up is super important. Energy supplements have become a popular choice to boost vitality. But before you start taking them, it's crucial to understand how they work, which ones suit you best, and what risks they might bring. Let's explore the world of energy supplements together!</p>
+                </div>
+            </div>
+
+            <div class="content-section" id="content">
+                <h2 class="lang-zh">1. 核心机制：能量补充剂如何为您的细胞提供动力</h2>
+                <h2 class="lang-en">1. The Core Mechanisms: How Energy Supplements Power Your Cells</h2>
+                
+                <div class="image-placeholder">
+                    <img src="新对话 (8).png" alt="细胞能量代谢示意图" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <div class="lang-zh">细胞能量代谢示意图</div>
+                    <div class="lang-en">Cellular Energy Metabolism Diagram</div>
+                </div>
+                
+                <h3 class="lang-zh">1.1 快速能量输送：满足细胞能量需求</h3>
+                <h3 class="lang-en">1.1 Rapid Energy Delivery: Meeting Cellular Energy Demands</h3>
+                <p class="lang-en">Energy supplements work by targeting cellular metabolic pathways with precision. Take fructose, a monosaccharide that converts to glucose in the liver 30% faster than glucose, bypassing rate-limiting steps in sugar metabolism. This allows it to raise blood sugar levels within 15-20 minutes, making it ideal for urgent energy needs in trauma patients or post-surgery recovery. Supplements like D-ribose peptides enhance ATP (adenosine triphosphate) synthesis, directly boosting energy reserves—critical for muscle recovery after intense workouts.</p>
+                
+                <h3 class="lang-zh">1.2 代谢调节：适应性能量管理</h3>
+                <h3 class="lang-en">1.2 Metabolic Regulation: Adaptive Energy Management</h3>
+                <p class="lang-en">Certain supplements offer metabolism-friendly advantages. Fructose, for example, doesn't require insulin for metabolism, minimizing blood sugar spikes and crashes—an optimal choice for diabetics or those managing blood glucose. Energy cocktails containing insulin regulate sugar metabolism, helping liver and muscles utilize glucose efficiently, especially beneficial for individuals with compromised liver or kidney function.</p>
+            </div>
+
+            <div class="content-section">
+                <h2 class="lang-zh">2. 常见能量补充剂类型：您的定制能量工具包</h2>
+                <h2 class="lang-en">2. Common Types of Energy Supplements: Your Tailored Energy Toolkit</h2>
+                
+                <h3 class="lang-zh">2.1 基础能量增强剂</h3>
+                <h3 class="lang-en">2.1 Basic Energy Boosters</h3>
+                
+                <h4 class="lang-zh">碳水化合物配方</h4>
+                <h4 class="lang-en">Carbohydrate Formulations</h4>
+                <ul class="lang-en">
+                    <li>Simple sugars like glucose and fructose are "gold standards" for emergency care and post-operative recovery, rapidly correcting low blood sugar.</li>
+                    <li>Complex carbs like maltodextrin provide sustained energy release, enhancing endurance during sports by maintaining steady glucose levels.</li>
+                </ul>
+                
+                <h4 class="lang-zh">维生素协同增强剂</h4>
+                <h4 class="lang-en">Vitamin Co-Enhancers</h4>
+                <p class="lang-en">B-vitamins (B1, B12, etc.) act as core coenzymes in energy production, catalyzing the conversion of food into ATP. Deficiencies lead to reduced energy efficiency, causing fatigue and poor focus—highly recommended for vegetarians and the elderly through multi-vitamin blends.</p>
+                
+                <div class="image-placeholder">
+                    <img src="nutrient-classification.png" alt="营养素分类与功能" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <div class="lang-zh">营养素分类与功能</div>
+                    <div class="lang-en">Nutrient Classification and Function</div>
+                </div>
+                
+                <h3 class="lang-zh">2.2 专业功能增强剂</h3>
+                <h3 class="lang-en">2.2 Specialized Function Enhancers</h3>
+                
+                <h4 class="lang-zh">氨基酸衍生物</h4>
+                <h4 class="lang-en">Amino Acid Derivatives</h4>
+                <ul class="lang-en">
+                    <li>Glutamine fuels intestinal mucosal cells, accelerating gut regeneration during wound healing while boosting immune cell activity.</li>
+                    <li>Arginine improves microcirculation by promoting nitric oxide synthesis, enhancing oxygen utilization during physical exertion.</li>
+                </ul>
+                
+                <div class="image-placeholder">
+                    <img src="新对话 (4).png" alt="氨基酸和分子结构" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <div class="lang-zh">氨基酸和分子结构图</div>
+                    <div class="lang-en">Amino Acids and Molecular Structure</div>
+                </div>
+                
+                <h4 class="lang-zh">脂质乳剂</h4>
+                <h4 class="lang-en">Lipid Emulsions</h4>
+                <p class="lang-en">As high-calorie density supplements (9kcal/g), they're essential for long-term parenteral nutrition (e.g., ICU patients). Containing essential fatty acids, they regulate inflammation and maintain cell membrane integrity.</p>
+            </div>
+
+            <div class="content-section">
+                <h2 class="lang-zh">3. 谁需要能量补充剂？针对性应用</h2>
+                <h2 class="lang-en">3. Who Needs Energy Supplements? Targeted Applications</h2>
+                
+                <div class="image-placeholder">
+                    <img src="新对话 (1).png" alt="不同人群的能量需求" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <div class="lang-zh">运动、工作和营养补充的平衡</div>
+                    <div class="lang-en">Balance of Exercise, Work, and Nutrition</div>
+                </div>
+                
+                <h3 class="lang-zh">3.1 高能量消耗群体</h3>
+                <h3 class="lang-en">3.1 High-Energy Expenditure Groups</h3>
+                <p class="lang-en">Athletes, intensive 脑力劳动者 (heavy mental workers), and the elderly often exceed dietary energy supply:</p>
+                <ul class="lang-en">
+                    <li>Athletes deplete 30-40g of muscle glycogen hourly during endurance training, requiring rapid replenishment.</li>
+                    <li>Seniors experience a 30% reduction in B-vitamin and amino acid absorption, making supplements crucial for metabolic support.</li>
+                </ul>
+                
+                <h3 class="lang-zh">3.2 病理支持</h3>
+                <h3 class="lang-en">3.2 Pathological Support</h3>
+                <p class="lang-en">Post-surgery, liver/kidney disease, and cancer patients face metabolic disruptions:</p>
+                <p class="lang-en">Liver damage reduces glycogen synthesis by 50%; kidney issues impair vitamin D activation. Energy cocktails with coenzyme A and ATP accelerate organ repair, cutting post-op recovery time by 10-15% (clinical studies).</p>
+                
+                <h3 class="lang-zh">3.3 特殊生理阶段</h3>
+                <h3 class="lang-en">3.3 Special Physiological Stages</h3>
+                <p class="lang-en">Pregnant/lactating women have increased needs for folate and iron, with iron-deficiency anemia risk 2-3x higher. Timely supplementation prevents fetal developmental issues and maternal fatigue.</p>
+            </div>
+
+            <div class="content-section">
+                <h2 class="lang-zh">4. 科学使用方法：避免陷阱，安全提升能量</h2>
+                <h2 class="lang-en">4. Science-Based Usage: Avoiding Pitfalls for Safe Energy Boost</h2>
+                
+                <div class="image-placeholder">
+                    <img src="新对话 (1).png" alt="安全使用指南" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <div class="lang-zh">安全使用指南</div>
+                    <div class="lang-en">Safe Usage Guidelines</div>
+                </div>
+                
+                <h3 class="lang-zh">4.1 正确时机，正确人群</h3>
+                <h3 class="lang-en">4.1 Right Timing, Right People</h3>
+                <p class="lang-en">Healthy individuals don't need supplements—overusing fructose may cause osmotic diarrhea. Use only under medical guidance for confirmed metabolic issues (e.g., chronic fatigue, post-surgical malnutrition).</p>
+                
+                <h3 class="lang-zh">4.2 正确给药</h3>
+                <h3 class="lang-en">4.2 Proper Administration</h3>
+                <ul class="lang-en">
+                    <li>IV formulations (e.g., lipid emulsions) require controlled infusion (<1.5ml/kg/h) to avoid hyperlipidemia.</li>
+                    <li>Oral supplements should be taken with meals (fat-soluble vitamins pair with fats for better absorption). Never use insulin-containing cocktails on an empty stomach to prevent hypoglycemia.</li>
+                </ul>
+                
+                <h3 class="lang-zh">4.3 监测与禁忌症</h3>
+                <h3 class="lang-en">4.3 Monitoring & Contraindications</h3>
+                <p class="lang-en">Regularly check blood sugar, lipids, and organ function (e.g., triglycerides every 2 weeks for long-term lipid emulsion users). Avoid:</p>
+                <ul class="lang-en">
+                    <li>Hyperlipidemia patients (lipid emulsions contraindicated)</li>
+                    <li>Fructose intolerance (avoid fructose-based products)</li>
+                    <li>Allergic individuals (screen for ingredient sensitivities first)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2 class="lang-zh">5. 结论：补充剂作为健康的科学伙伴</h2>
+                <h2 class="lang-en">5. Conclusion: Supplements as a Scientific Partner for Health</h2>
+                <p class="lang-en">Energy supplements are not "universal chargers" but precise tools for specific energy needs. By understanding their mechanisms, choosing wisely, and following guidelines, they provide efficient support during critical periods while minimizing risks. Remember: a balanced diet remains your primary energy source. Use supplements under professional guidance to let science work in harmony with natural nutrition for optimal energy balance.</p>
+                
+                <div class="image-placeholder">
+                    <img src="ATP 和 B 族维生素的能量代谢作用.png" alt="ATP和B族维生素综合作用" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <div class="lang-zh">ATP和B族维生素的综合作用机制</div>
+                    <div class="lang-en">Comprehensive ATP and B-Vitamin Action Mechanism</div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4 class="lang-zh">💡 重要提示</h4>
+                <h4 class="lang-en">💡 Important Note</h4>
+                <p class="lang-zh">在使用任何能量补充剂之前，请务必咨询医疗专业人士，特别是如果您有现有健康状况或正在服用其他药物。</p>
+                <p class="lang-en">Before using any energy supplements, always consult with a healthcare professional, especially if you have existing health conditions or are taking other medications.</p>
+            </div>
+
+            <!-- 疲劳改善信息图 -->
+            <div class="content-section">
+                <h2 class="lang-zh">6. 疲劳改善：营养素协同作用</h2>
+                <h2 class="lang-en">6. Fatigue Improvement: Nutrient Synergy</h2>
+                
+                <div class="image-placeholder">
+                    <img src="./vibby.ai-0.1.3-game-mode/新对话 (1).png" alt="疲劳改善营养素图" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <div class="lang-zh">疲劳改善营养素协同作用图</div>
+                    <div class="lang-en">Fatigue Improvement Nutrient Synergy Diagram</div>
+                </div>
+                
+                <p class="lang-zh">疲劳改善需要多种营养素的协同作用，包括B族维生素、矿物质和酶类物质。B12作为核心营养素，与叶酸、B6、维生素C等形成完整的能量代谢网络。</p>
+                <p class="lang-en">Fatigue improvement requires the synergistic action of multiple nutrients, including B vitamins, minerals, and enzymes. B12 as a core nutrient forms a complete energy metabolism network with folic acid, B6, vitamin C, and others.</p>
+            </div>
+
+            <!-- 健康生活方式 -->
+            <div class="content-section">
+                <h2 class="lang-zh">7. 健康生活方式：均衡饮食与适度运动</h2>
+                <h2 class="lang-en">7. Healthy Lifestyle: Balanced Diet and Moderate Exercise</h2>
+                
+                <div class="image-placeholder">
+                    <img src="./vibby.ai-0.1.3-game-mode/新对话 (2).png" alt="健康生活方式图" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <div class="lang-zh">运动、工作和营养补充的平衡</div>
+                    <div class="lang-en">Balance of Exercise, Work, and Nutrition</div>
+                </div>
+                
+                <p class="lang-zh">健康的生活方式是能量补充的基础。通过均衡饮食、适度运动和科学补充，我们可以实现最佳的能量状态。运动者需要快速能量补充，工作者需要持续能量支持，而铁等矿物质对整体健康至关重要。</p>
+                <p class="lang-en">A healthy lifestyle is the foundation of energy supplementation. Through balanced diet, moderate exercise, and scientific supplementation, we can achieve optimal energy levels. Athletes need rapid energy replenishment, workers need sustained energy support, and minerals like iron are crucial for overall health.</p>
+                
+                <div class="highlight-box">
+                    <h4 class="lang-zh">🏃‍♂️ 运动能量补充</h4>
+                    <h4 class="lang-en">🏃‍♂️ Exercise Energy Supplementation</h4>
+                    <p class="lang-zh">运动时身体需要快速能量补充，建议在运动前30分钟服用碳水化合物补充剂，运动后及时补充蛋白质和电解质。</p>
+                    <p class="lang-en">During exercise, the body needs rapid energy replenishment. It's recommended to take carbohydrate supplements 30 minutes before exercise and replenish protein and electrolytes promptly after exercise.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4 class="lang-zh">💼 工作能量支持</h4>
+                    <h4 class="lang-en">💼 Work Energy Support</h4>
+                    <p class="lang-zh">脑力工作者需要持续的能量支持，B族维生素和铁元素对维持认知功能和注意力集中至关重要。</p>
+                    <p class="lang-en">Mental workers need sustained energy support. B vitamins and iron are crucial for maintaining cognitive function and concentration.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4 class="lang-zh">🥗 均衡营养基础</h4>
+                    <h4 class="lang-en">🥗 Balanced Nutrition Foundation</h4>
+                    <p class="lang-zh">均衡饮食是能量补充的基础，确保摄入足够的蛋白质、碳水化合物、健康脂肪和微量营养素。</p>
+                    <p class="lang-en">Balanced diet is the foundation of energy supplementation, ensuring adequate intake of protein, carbohydrates, healthy fats, and micronutrients.</p>
+                </div>
+            </div>
+
+            <!-- 营养素详细说明 -->
+            <div class="content-section">
+                <h2 class="lang-zh">8. 关键营养素详解</h2>
+                <h2 class="lang-en">8. Key Nutrients Explained</h2>
+                
+                <div class="image-placeholder">
+                    <img src="新对话 (3).png" alt="营养素详细图" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <div class="lang-zh">营养素详细说明</div>
+                    <div class="lang-en">Detailed Vitamin and Mineral Information</div>
+                </div>
+                
+                <h3 class="lang-zh">8.1 B族维生素网络</h3>
+                <h3 class="lang-en">8.1 B-Vitamin Network</h3>
+                <ul class="lang-en">
+                    <li><strong>B12 (钴胺素)</strong>: 核心能量代谢辅酶，参与DNA合成和红细胞形成</li>
+                    <li><strong>B6 (吡哆醇)</strong>: 参与氨基酸代谢和神经递质合成</li>
+                    <li><strong>叶酸</strong>: 与B12协同作用，参与细胞分裂和DNA合成</li>
+                    <li><strong>生物素</strong>: 参与脂肪酸代谢和糖异生过程</li>
+                </ul>
+                
+                <h3 class="lang-zh">8.2 关键矿物质</h3>
+                <h3 class="lang-en">8.2 Key Minerals</h3>
+                <ul class="lang-en">
+                    <li><strong>铁</strong>: 血红蛋白合成必需，预防贫血和疲劳</li>
+                    <li><strong>锌</strong>: 参与300多种酶反应，支持免疫和能量代谢</li>
+                    <li><strong>镁</strong>: 参与ATP合成，支持肌肉和神经功能</li>
+                </ul>
+                
+                <h3 class="lang-zh">8.3 酶类物质</h3>
+                <h3 class="lang-en">8.3 Enzymatic Substances</h3>
+                <ul class="lang-en">
+                    <li><strong>辅酶A</strong>: 参与脂肪酸代谢和能量产生</li>
+                    <li><strong>ATP酶</strong>: 直接参与细胞能量转换</li>
+                    <li><strong>抗氧化酶</strong>: 保护细胞免受氧化损伤</li>
+                </ul>
+                
+                <div class="image-placeholder">
+                    <img src="./vibby.ai-0.1.3-game-mode/新对话 (4).png" alt="酶类物质图" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <div class="lang-zh">酶类物质和代谢过程</div>
+                    <div class="lang-en">Enzymatic Substances and Metabolic Processes</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function switchLanguage(lang) {
+            console.log('Switching to language:', lang);
+            
+            // Update language buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Find and activate the correct button
+            if (lang === 'zh') {
+                document.querySelector('.lang-btn[onclick*="zh"]').classList.add('active');
+            } else {
+                document.querySelector('.lang-btn[onclick*="en"]').classList.add('active');
+            }
+            
+            // Show/hide content based on language
+            if (lang === 'en') {
+                document.body.classList.add('lang-en');
+                document.body.classList.remove('lang-zh');
+                console.log('Switched to English');
+            } else {
+                document.body.classList.add('lang-zh');
+                document.body.classList.remove('lang-en');
+                console.log('Switched to Chinese');
+            }
+            
+            // Update document title
+            if (lang === 'en') {
+                document.title = 'Energy Supplements Guide - 能量补充剂指南';
+            } else {
+                document.title = '能量补充剂指南 - Energy Supplements Guide';
+            }
+        }
+        
+        // Initialize with English
+        document.body.classList.add('lang-en');
+        console.log('Page initialized with English');
+    </script>
+</body>
+</html> 
